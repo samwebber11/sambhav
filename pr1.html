@@ -3,9 +3,8 @@
     <title>
         Drum Kit
     </title>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <style>
-    body
+     <style>
+     body
     {
     	background-image:url("14.jpg");
     }
@@ -13,25 +12,71 @@
     {
     	width:50px;
     	height:40px;
+    	margin-top: 350px;
+    	margin-left: 310px;
     	border:5px solid yellow;
-       margin-left:200px;
-       margin-top:350px;
-
+       	font-size: 30px;
+       	text-align: center;
+       	color:white;
+       	float:left;
     }
     #box2
     {
     	width:50px;
     	height:40px;
     	border:5px solid yellow;
-       margin:200px;
+    	margin-top: 350px;
+    	margin-left: 40px;
+    		font-size: 30px;
+       	text-align: center;
+       	color:white;
+       	float:left;
+    }
+    .sound
+    {
+    	color:red;
+    	font-size: 10px;
+    	text-align: center;
     }
 </style>
+
 </head>
 <body>
 	<section>
-<div id="box1" style="font:white;">A
+		<div>
+<div  class="key" data-key="65" id="box1"><kbd>A</kbd>
+<span class="sound">Swem</span>
 </div>
-<div id="box2">
+<div id="box2" class="key" data-key="83"><kbd>S</kbd>
+<span class="sound">Squad</span>
+</div>
+<div id="box2" class="key" data-key="68"><kbd>D</kbd>
+	<span class="sound">Crest</span>
 	</div>
+	<div id="box2" class="key" data-key="70"><kbd>F</kbd>
+	<span class="sound">Morty</span>
+	</div>
+	<div id="box2" class="key" data-key="71"><kbd>G</kbd>
+	<span class="sound">Oak</span>
+	</div>
+	<div id="box2" class="key" data-key="72"><kbd>H</kbd><span class="sound">Rock</span></div>
+	<div id="box2" class="key" data-key="74"><kbd>J</kbd>
+		<span class="sound">Trump</span></div>
+</div>
     </section>
+<audio controls data-key="65" src="gun.wav"></audio>
+<audio controls data-key="83" src="gun1.wav"></audio>
+<audio controls data-key="68" src="gun2.wav"></audio>
+<audio controls data-key="70" src="1.wav"></audio>
+<audio controls data-key="71" src="2.wav"></audio>
+<audio controls data-key="72" src="3.wav"></audio>
+<audio controls data-key="74" src="4.wav"></audio>
+
+
+<script type="text/javascript">
+	window.addEventListener('keydown',function(e)
+	{
+		console.log(e.keycode);
+	});
+</script>
 </body>
